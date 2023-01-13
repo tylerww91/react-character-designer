@@ -2,10 +2,11 @@ import React from 'react';
 
 import './Editor.css';
 
-export default function Editor({ name, head, setName, setHead }) {
+export default function Editor({ name, head, torso, setName, setHead, setTorso }) {
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
     e.target.name === 'head' && setHead(e.target.value);
+    e.target.name === 'torso' && setTorso(e.target.value);
   };
   return (
     <div className="editor">
@@ -22,7 +23,7 @@ export default function Editor({ name, head, setName, setHead }) {
         <label>Head</label>
       </div>
       <div className="from-control">
-        <select name="torso">
+        <select name="torso" value={torso} onChange={handleChange}>
           <option value="green">Green</option>
           <option value="yellow">Yellow</option>
           <option value="blue">Blue</option>
