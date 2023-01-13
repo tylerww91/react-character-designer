@@ -4,6 +4,7 @@ import background from '../../final-destination.jpg';
 
 import Preview from '../Preview/Preview';
 import Editor from '../Editor/Editor';
+import Stats from '../Stats/Stats';
 
 import './Home.css';
 
@@ -12,6 +13,7 @@ export default function Home() {
     <main style={{ backgroundImage: `url(${background})` }}>
       <Editor />
       <Preview />
+      <Stats />
     </main>
   );
 }
