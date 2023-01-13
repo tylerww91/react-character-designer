@@ -14,6 +14,7 @@ export default function Home() {
   const [name, setName] = useState('');
   const [head, setHead] = useState('rock');
   const [torso, setTorso] = useState('green');
+  const [legs, setLegs] = useState('muscular');
 
   return (
     <main style={{ backgroundImage: `url(${background})` }}>
@@ -24,8 +25,10 @@ export default function Home() {
         setHead={setHead}
         torso={torso}
         setTorso={setTorso}
+        legs={legs}
+        setLegs={setLegs}
       />
-      <Preview name={name} head={head} torso={torso} />
+      <Preview name={name} head={head} torso={torso} legs={legs} />
       <Stats />
     </main>
   );
