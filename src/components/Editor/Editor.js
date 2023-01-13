@@ -1,13 +1,35 @@
 import React from 'react';
-
+import { useState } from 'react';
 import './Editor.css';
 
-export default function Editor({ name, head, torso, legs, setName, setHead, setTorso, setLegs }) {
+export default function Editor({
+  name,
+  head,
+  torso,
+  legs,
+  setName,
+  setHead,
+  setTorso,
+  setLegs,
+  setCatchphrase,
+}) {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleClick = () => {
+    if (inputValue === '') {
+      return alert('please enter a catchphrase');
+    } else {
+      setCatchphrase((currentCatchphrase) => [...currentCatchphrase, inputValue]);
+      setInputValue('');
+    }
+  };
+
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
     e.target.name === 'head' && setHead(e.target.value);
     e.target.name === 'torso' && setTorso(e.target.value);
     e.target.name === 'legs' && setLegs(e.target.value);
+    e.target.name === 'catchphrase' && setCatchphrase(e.target.value);
   };
   return (
     <div className="editor">
@@ -40,7 +62,8 @@ export default function Editor({ name, head, torso, legs, setName, setHead, setT
         <label>Legs</label>
       </div>
       <div className="form-controls">
-        <textarea name="catchphrase" />
+        <input name="catchphrase" type="text" onChange={(e) => setInputValue(e.target.value)} />
+        <button onClick={handleClick}></button>
         <label>Catchphrase</label>
       </div>
     </div>

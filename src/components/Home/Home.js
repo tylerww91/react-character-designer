@@ -15,6 +15,7 @@ export default function Home() {
   const [head, setHead] = useState('rock');
   const [torso, setTorso] = useState('green');
   const [legs, setLegs] = useState('muscular');
+  const [catchphrase, setCatchphrase] = useState([]);
 
   return (
     <main style={{ backgroundImage: `url(${background})` }}>
@@ -27,9 +28,11 @@ export default function Home() {
         setTorso={setTorso}
         legs={legs}
         setLegs={setLegs}
+        // catchphrase={catchphrase}
+        setCatchphrase={setCatchphrase}
       />
       <Preview name={name} head={head} torso={torso} legs={legs} />
-      <Stats />
+      <Stats catchphrase={catchphrase} />
     </main>
   );
 }
