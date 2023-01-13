@@ -5,7 +5,12 @@
   padding-top: 38%;
 }
 
-.legs {
+h2 {
+  /* margin-top: -10px; */
+  margin-bottom: 0px;
+}
+
+/* .legs {
   width: 20%;
 }
 
@@ -15,4 +20,8 @@
 
 .head {
   width: 20%;
+} */
+
+img {
+  height: 120px;
 }

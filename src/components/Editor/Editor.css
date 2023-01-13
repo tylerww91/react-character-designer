@@ -1,0 +1,22 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  width: 30%;
+  background-color: #53688e;
+}
+
+.editor select {
+  width: 150px;
+}
+
+.editor input {
+  width: 150px;
+}
+
+.editor button {
+  width: 130px;
+  height: 16px;
+}

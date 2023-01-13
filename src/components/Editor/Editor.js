@@ -58,37 +58,37 @@ export default function Editor({
   return (
     <div className="editor">
       <div className="form-control">
-        <input name="name" type="text" value={name} onChange={handleChange} />
         <label htmlFor="name">Name</label>
+        <input name="name" type="text" value={name} onChange={handleChange} />
       </div>
       <div className="form-control">
+        <label>Head</label>
         <select name="head" value={head} onChange={handleChange}>
           <option value="rock">Rock</option>
           <option value="cage">Cage</option>
           <option value="frank">Frank</option>
         </select>
-        <label>Head</label>
       </div>
       <div className="from-control">
+        <label>Torso</label>
         <select name="torso" value={torso} onChange={handleChange}>
           <option value="green">Green</option>
           <option value="yellow">Yellow</option>
           <option value="blue">Blue</option>
         </select>
-        <label>Torso</label>
       </div>
       <div className="form-control">
+        <label>Legs</label>
         <select name="legs" value={legs} onChange={handleChange}>
           <option value="muscular">Muscular</option>
           <option value="feminine">Feminine</option>
           <option value="elf">Elf</option>
         </select>
-        <label>Legs</label>
       </div>
       <div className="form-controls">
-        <input name="catchphrase" type="text" onChange={(e) => setInputValue(e.target.value)} />
-        <button onClick={handleClick}></button>
         <label>Catchphrase</label>
+        <input name="catchphrase" type="text" onChange={(e) => setInputValue(e.target.value)} />
+        <button onClick={handleClick}>Add</button>
       </div>
     </div>
   );
