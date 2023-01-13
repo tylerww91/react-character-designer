@@ -12,6 +12,8 @@ export default function Editor({
   setTorso,
   setLegs,
   setCatchphrase,
+  setHeadCount,
+  headCount,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -26,7 +28,13 @@ export default function Editor({
 
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
-    e.target.name === 'head' && setHead(e.target.value);
+    e.target.name === 'head' &&
+      setHead(
+        e.target.value,
+        setHeadCount(() => {
+          return headCount + 1;
+        })
+      );
     e.target.name === 'torso' && setTorso(e.target.value);
     e.target.name === 'legs' && setLegs(e.target.value);
     e.target.name === 'catchphrase' && setCatchphrase(e.target.value);
