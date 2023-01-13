@@ -12,11 +12,12 @@ import './Home.css';
 
 export default function Home() {
   const [name, setName] = useState('');
+  const [head, setHead] = useState('rock');
 
   return (
     <main style={{ backgroundImage: `url(${background})` }}>
-      <Editor name={name} setName={setName} />
-      <Preview name={name} />
+      <Editor name={name} setName={setName} head={head} setHead={setHead} />
+      <Preview name={name} head={head} />
       <Stats />
     </main>
   );
