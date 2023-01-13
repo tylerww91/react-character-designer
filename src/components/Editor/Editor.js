@@ -14,6 +14,8 @@ export default function Editor({
   setCatchphrase,
   setHeadCount,
   headCount,
+  setTorsoCount,
+  torsoCount,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -35,7 +37,13 @@ export default function Editor({
           return headCount + 1;
         })
       );
-    e.target.name === 'torso' && setTorso(e.target.value);
+    e.target.name === 'torso' &&
+      setTorso(
+        e.target.value,
+        setTorsoCount(() => {
+          return torsoCount + 1;
+        })
+      );
     e.target.name === 'legs' && setLegs(e.target.value);
     e.target.name === 'catchphrase' && setCatchphrase(e.target.value);
   };
