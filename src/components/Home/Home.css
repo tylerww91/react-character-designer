@@ -1,4 +1,6 @@
 main {
   height: 80vh;
   background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
