@@ -1,0 +1,27 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 38%;
+}
+
+h2 {
+  /* margin-top: -10px; */
+  margin-bottom: 0px;
+}
+
+/* .legs {
+  width: 20%;
+}
+
+.torso {
+  width: 20%;
+}
+
+.head {
+  width: 20%;
+} */
+
+img {
+  height: 120px;
+}
