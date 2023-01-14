@@ -87,7 +87,12 @@ export default function Editor({
       </div>
       <div className="form-controls">
         <label>Catchphrase</label>
-        <input name="catchphrase" type="text" onChange={(e) => setInputValue(e.target.value)} />
+        <input
+          name="catchphrase"
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
         <button onClick={handleClick}>Add</button>
       </div>
     </div>
